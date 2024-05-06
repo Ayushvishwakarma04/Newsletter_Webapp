@@ -29,7 +29,7 @@ app.post("/",function(req,res){
     const url = "https://us18.api.mailchimp.com/3.0/lists/888566541a";
     const options = {
         method: "POST",
-        auth: "Ayush4:8d39f09697b120241327f0376a2f7454-us18"
+        auth: "" //API KEY
     }
     const request = https.request(url,options,function(response){
         if (response.statusCode === 200){
@@ -52,6 +52,3 @@ app.post("/failure",function(req,res){
 app.listen(process.env.PORT || 3000,function(){ //to run on heroku
     console.log("Server running on 3000");
 });
-
-//8d39f09697b120241327f0376a2f7454-us18
-// List Id : 888566541a
